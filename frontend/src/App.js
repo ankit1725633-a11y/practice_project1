@@ -34,7 +34,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get(`http://localhost:8000/tasks?username=${user}`, getAuthHeaders());
+      const res = await axios.get(`https://practice-project1.onrender.com/tasks?username=${user}`, getAuthHeaders());
       setTasks(res.data);
     } catch (err) {
       if (err.response?.status === 401) handleLogout(); 
@@ -44,7 +44,7 @@ function App() {
   const addTask = async () => {
     if (!title.trim()) return showNotification("Task title is required", "error");
     try {
-      await axios.post("http://localhost:8000/tasks", { title, category, owner: user }, getAuthHeaders());
+      await axios.post("https://practice-project1.onrender.com/tasks", { title, category, owner: user }, getAuthHeaders());
       showNotification("Task added! 🚀");
       setTitle(""); 
       fetchTasks(); 

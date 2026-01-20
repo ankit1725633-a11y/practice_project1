@@ -115,3 +115,7 @@ async def delete_task(task_id: str):
 async def clear_completed(username: str):
     await db["tasks"].delete_many({"owner": username, "completed": True})
     return {"message": "Cleared completed tasks"}
+
+@app.get("/", response_class=PlainTextResponse)
+async def root():
+    return "FastAPI server is running successfully 🚀"
