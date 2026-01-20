@@ -120,4 +120,4 @@ async def clear_completed(username: str):
 
 @app.get("/", response_class=PlainTextResponse)
 async def root():
-    return "FastAPI server is running successfully 🚀"
+    return "Ankit 🚀"
