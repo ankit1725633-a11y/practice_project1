@@ -7,6 +7,8 @@ from typing import List
 from passlib.context import CryptContext
 from jose import jwt, JWTError
 from datetime import datetime, timedelta
+from fastapi.responses import PlainTextResponse
+
 
 # 1. SECURITY & JWT CONFIGURATION
 SECRET_KEY = "your-super-secret-key-change-this" # Keep this private!
