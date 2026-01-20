@@ -28,7 +28,7 @@ def create_access_token(data: dict):
 # 3. THE BRIDGE (CORS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://practice-project1-ashen.vercel.app/"],
+    allow_origins=["http://localhost:3000", "https://practice-project1-ashen.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
