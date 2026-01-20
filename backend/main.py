@@ -34,7 +34,7 @@ app.add_middleware(
 )
 
 # 4. DATABASE CONNECTION
-client = AsyncIOMotorClient("mongodb+srv://ankitkumar123:<db_password>@cluster0.q8pj8i7.mongodb.net/?appName=Cluster0")
+client = AsyncIOMotorClient("mongodb+srv://ankitkumar123:ankit123@cluster0.q8pj8i7.mongodb.net/?appName=Cluster0")
 db = client.task_manager_db
 
 # 5. BLUEPRINTS (Pydantic Models)
