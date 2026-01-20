@@ -13,7 +13,7 @@ function Auth({ onLogin }) {
     const payload = isRegister ? { username, email, password } : { username, password };
 
     try {
-      const res = await axios.post(`http://localhost:8000/${endpoint}`, payload);
+      const res = await axios.post(`https://practice-project1-1.onrender.com/${endpoint}`, payload);
       
       if (!isRegister) {
         // CORRECTED: Store BOTH the username and the JWT token
