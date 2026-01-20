@@ -26,13 +26,13 @@ def create_access_token(data: dict):
 # 3. THE BRIDGE (CORS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "https://practice-project1-ashen.vercel.app/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # 4. DATABASE CONNECTION
-client = AsyncIOMotorClient("mongodb://localhost:27017")
+client = AsyncIOMotorClient("mongodb+srv://ankitkumar123:<db_password>@cluster0.q8pj8i7.mongodb.net/?appName=Cluster0")
 db = client.task_manager_db
 
 # 5. BLUEPRINTS (Pydantic Models)
